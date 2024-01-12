@@ -1,0 +1,6 @@
+@cmcbeassisgnment_HostAddress = http://localhost:5200
+
+GET {{cmcbeassisgnment_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
