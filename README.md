@@ -35,7 +35,7 @@ Provide step-by-step instructions to set up the project locally.
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/venkatweb1234/cmcmarketsbetask.git
+    git clone https://github.com/venkatweb1234/cmcbeassisgnment.git
     ```
 
 2. Open the project in Visual Studio or your preferred IDE.
@@ -153,7 +153,7 @@ The steps to prepare the project for production release.
 
 # Additionally added Log4net for log the all logs
 - I added Log4net for log the files.
-- 
+- Look at the logs folder for all logs
 ## Handover Instructions
 
 1. **Project Structure:**
@@ -165,8 +165,10 @@ The steps to prepare the project for production release.
    - Migrations have been applied using Entity Framework Core.
 
 3. **Authentication and Authorization:**
-   - User authentication is done based on Username, password, role.
+   - User authentication and authorization is done based on Username, password, role.
      only the user who has role Admin can be authorised along with success username and password.
+   - Note: In the task just mention databse schema I have done that.
+   - ** Coming to reality we can use JWT Token for authorization, that I did not implement that because in task mentioned only database Schema **.
 
 4. **API Endpoints:**
    - Refer to the "Usage" section for a list of key API endpoints.
