@@ -1,7 +1,20 @@
 # cmcbeassisgnment
 # Your Project Name
-CMC Market backend assessment
-## Introduction
+# CMC Market Backend Assessment
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Prerequisites](#prerequisites)
+3. [Getting Started](#getting-started)
+4. [Production Release](#production-release)
+5. [Usage](#usage)
+6. [Logs](#logs)
+7. [Handover](#handover)
+8. [Process](#process)
+9. [Screenshots](#screenshots)
+
+## Introduction <a name="introduction"></a>
 
 # Task 1: Data Persistence
 Integrate a database (SQL Server or SQLite) to persist user-related data, such as user profiles and
@@ -19,7 +32,7 @@ could involve asynchronous database operations or using async/await in the API c
 Implement robust exception handling for your API. Ensure that the application gracefully handles
 common errors, returns appropriate HTTP status codes, and provides informative error messages.
 
-## Prerequisites
+## Prerequisites <a name="prerequisites"></a>
 
 List the prerequisites that the user needs to have installed before running the project.
  # Install Required NuGet Packages
@@ -28,11 +41,11 @@ List the prerequisites that the user needs to have installed before running the 
 - SQL Server instance and connection string
 
 
-## Getting Started
+## Getting Started <a name="getting-started"></a> 
 
 Provide step-by-step instructions to set up the project locally.
 
-1. Clone the repository:
+1. Clone the Repository
 
     ```bash
     git clone https://github.com/venkatweb1234/cmcbeassisgnment.git
@@ -40,7 +53,7 @@ Provide step-by-step instructions to set up the project locally.
 
 2. Open the project in Visual Studio or your preferred IDE.
 
-3. Configure the database connection string in `appsettings.json`.
+3. ###  Configure the database connection string in `appsettings.json`. <a name="configure-database-connection"></a>
    -  "ConnectionStrings": {
    "SqlConn": "Data Source=.\\sqlexpress;Initial Catalog=userroletask;Integrated Security=True;Encrypt=False"
  } (Aready is there no need to config)
@@ -60,7 +73,7 @@ Provide step-by-step instructions to set up the project locally.
 
 - Visit `https://localhost:7021/swagger/index.html` to access Swagger documentation and test your API endpoints.
 
-## Production Release
+## Production Release <a name="production-release"></a>  
 
 The steps to prepare the project for production release.
 
@@ -80,7 +93,7 @@ The steps to prepare the project for production release.
 
 4. Deploy the published files to your production server.
 
-## Usage
+### Usage  <a name="usage"></a>
 
 ### API Endpoints
 
@@ -136,6 +149,9 @@ The steps to prepare the project for production release.
      - Invalid credentials: HTTP 401 Unauthorized
      - If any error occured during process 500 (Internal server error)
 
+- **Note-:** UserProfiles, Roles end points are for persisting data to SQL Server.Before using or testing login end point we have to persist user and role data by using mentioned end points.
+- As menioned in the task authentication and authorization database schema was implemented, we test with login end point.
+
 # Task 2
 3. **Tasks completed in the last 7 days.**
    - Endpoint: `GET /api/Tasks/Completed-last-7-days`
@@ -151,10 +167,12 @@ The steps to prepare the project for production release.
 # Task 4: Exception Handling
 - Implemented robust exception handling for all API endpoint. Added common errors to find try/catch/finally. Implemented required HTTP status codes for all tasks(end points)
 
-# Additionally added Log4net for log the all logs
+### Additionally added Log4net for log the all logs <a name="logs"></a>
 - I added Log4net for log the files.
 - Look at the logs folder for all logs
-## Handover Instructions
+
+
+### Handover Instructions <a name="handover"></a> 
 
 1. **Project Structure:**
    - The project follows a standard ASP.NET Core Web API structure.
@@ -167,8 +185,8 @@ The steps to prepare the project for production release.
 3. **Authentication and Authorization:**
    - User authentication and authorization is done based on Username, password, role.
      only the user who has role Admin can be authorised along with success username and password.
-   - Note: In the task just mention databse schema I have done that.
-   - ** Coming to reality we can use JWT Token for authorization, that I did not implement that because in task mentioned only database Schema **.
+   - **Note: In the task just mention databse schema I have done that.**
+   - **Coming to reality we can use JWT Token for authorization, that I did not implement that because in task mentioned only database Schema**.
 
 4. **API Endpoints:**
    - Refer to the "Usage" section for a list of key API endpoints.
@@ -184,7 +202,7 @@ The steps to prepare the project for production release.
 7. **Known Issues:**
    - No known issues at the time of handover.
 
-  ## Process
+  ### Process <a name="process"></a> 
    1) For Fist task persist User profile and Role (User Controller and Role Controller), For Authentication and Authrozation (Login Controller)
    2) For Second Task (last 7 days tasks) TasksController
    3) For DB, used SQL Server , With DBContext, tables (UserProfile, Role, Tasks) are create dautomatically once run the program
@@ -196,7 +214,7 @@ The steps to prepare the project for production release.
    7) All logs are captured in log.txt file
   
   screen shots for each end point  are attached
-  ## Screen Shot for All End Points
+  ## Screen Shot for All End Points <a name="screenshots"></a> 
  - Please refer this path: cmcmarketsbetask\cmcmarketsbetask\images\All end points.png
  ## How to excute endpoint in Swagger
      ## Go to UserProfile end point click on Tryit button
